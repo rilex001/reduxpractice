@@ -4,9 +4,11 @@ import { useSelector, useDispatch } from 'react-redux'
 import { increment } from './actions/index'
 import { decrement } from './actions/index'
 import Root from './component/Root'
+import { changeUser } from './actions/'
 function App() {
   const counter = useSelector(state => state.counter)
   const isLogged = useSelector(state => state.isLogged)
+  const changeUser = useSelector(state => state.changeUser)
   const dispatch = useDispatch( )
   return (
     <div className="App">

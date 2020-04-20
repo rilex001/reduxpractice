@@ -8,10 +8,8 @@ const  Root = () => {
     )
 }
 
-const mapStateToProps = (state) => {
-    return {
-      posts: state.posts
-    }
-  }
+const mapStateToProps = state => ({
+    currentUser: state.user.currentUser
+  })
   
   export default connect(mapStateToProps)(Root)

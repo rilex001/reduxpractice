@@ -10,3 +10,9 @@ export const decrement = (number) => {
         payload: number
     }
 };
+export const changeUser = (name) => {
+    return {
+        type: 'SET_CURRENT_USER',
+        payload: name
+    }
+}
