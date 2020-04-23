@@ -6,8 +6,21 @@ import * as serviceWorker from './serviceWorker';
 import { createStore } from 'redux'
 import allReducers from './reducers'
 import { Provider } from 'react-redux'
+import { createPolicy} from './actions'
+import { deletePolicy} from './actions'
+import { createClaim} from './actions'
+
+
 
 const store = createStore(allReducers)
+store.dispatch(createPolicy('Alex'))
+console.log(store.getState())
+
+store.dispatch(createClaim('Alex', 100))
+store.dispatch(deletePolicy('Alex'))
+console.log(store.getState())
+
+
 
 ReactDOM.render(
   <React.StrictMode>

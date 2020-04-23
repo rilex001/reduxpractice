@@ -16,6 +16,32 @@ export const changeUser = (name) => {
         payload: name
     }
 }
+export const createClaim = (name, amountOfMoneyToCollect) => {
+    return {
+        type: 'CREATE_CLAIM',
+        payload: {
+            name,
+            amountOfMoneyToCollect
+        }
+    }
+}
+export const createPolicy = name => {
+    return {
+        type: 'CREATE_POLICY',
+        payload: {
+            name,
+            amount: 20
+        }
+    }
+}
+export const deletePolicy = name => {
+    return {
+        type: 'DELETE_POLICY',
+        payload: {
+            name
+        }
+    }
+}
 
 
 
